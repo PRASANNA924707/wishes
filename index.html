@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Raksha Bandhan ❤️</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+body{
+    background:linear-gradient(135deg,#ff758c,#ff7eb3,#ffc3a0);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+}
+.card{
+    width:90%;
+    max-width:700px;
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(10px);
+    border-radius:20px;
+    padding:30px;
+    color:#fff;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.2);
+}
+h1{font-size:32px;}
+h2{margin:10px 0 20px;}
+.rakhi{
+    font-size:60px;
+    animation:spin 8s linear infinite;
+}
+@keyframes spin{
+    100%{transform:rotate(360deg);}
+}
+button{
+    margin-top:20px;
+    padding:14px 25px;
+    border:none;
+    border-radius:30px;
+    background:#fff;
+    color:#e91e63;
+    font-weight:bold;
+    cursor:pointer;
+}
+#msg{
+    display:none;
+    margin-top:25px;
+    text-align:left;
+    line-height:1.8;
+    background:rgba(255,255,255,.12);
+    padding:18px;
+    border-radius:15px;
+}
+.heart{
+    position:absolute;
+    font-size:22px;
+    animation:float 8s linear infinite;
+}
+@keyframes float{
+    from{transform:translateY(100vh);opacity:0;}
+    to{transform:translateY(-100px);opacity:1;}
+}
+.footer{
+    text-align:center;
+    margin-top:20px;
+    font-size:18px;
+    font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <div class="rakhi">🪢</div>
+
+    <h1>Happy Raksha Bandhan</h1>
+    <h2>My Dear Lovely Veera Annaya ❤️</h2>
+
+    <p>For the first and most special brother in my life.</p>
+
+    <button onclick="showMessage()">Open My Letter 💌</button>
+
+    <div id="msg">
+        <p><b>My Dearest Veera Annaya,</b></p>
+
+        <p>
+        You are my very first brother, and that is something only you and I truly understand.
+        I pray that our bond stays this beautiful forever.
+        </p>
+
+        <p>
+        I love you so much, Annaya. Whenever I need help, you are always the first person standing beside me.
+        Thank you for being my biggest support and my strength.
+        </p>
+
+        <p>
+        I wish you a life filled with happiness. May your career become even more successful,
+        may you achieve every goal you dream of, and may you become a wonderful family man.
+        </p>
+
+        <p>
+        Please stay with me for life as my support, my shadow, and my protector.
+        Let's continue teasing each other, fighting over silly things, laughing together,
+        and making unforgettable memories forever.
+        </p>
+
+        <p>
+        Raksha Bandhan is a special day for our bond, but my love and respect for you cannot be expressed in just one day.
+        Today is simply my chance to tell you what my heart always feels.
+        </p>
+
+        <div class="footer">
+            ❤️ Love You So Much, Annaya ❤️<br>
+            Happy Raksha Bandhan 🌸
+        </div>
+    </div>
+</div>
+
+<script>
+function showMessage(){
+    document.getElementById("msg").style.display="block";
+}
+
+for(let i=0;i<30;i++){
+    let h=document.createElement("div");
+    h.className="heart";
+    h.innerHTML=Math.random()>0.5?"💖":"🤍";
+    h.style.left=Math.random()*100+"vw";
+    h.style.animationDuration=(5+Math.random()*5)+"s";
+    h.style.animationDelay=Math.random()*5+"s";
+    document.body.appendChild(h);
+}
+</script>
+
+</body>
+</html>
